@@ -1,0 +1,280 @@
+/* =========================
+   Global Styles
+========================= */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: #1f2937;
+  background-color: #ffffff;
+  overflow-x: hidden; /* Prevent accidental horizontal scroll */
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* =========================
+   Responsive Container
+========================= */
+.container {
+  width: min(100% - 2rem, 1200px);
+  margin-inline: auto;
+}
+
+/* =========================
+   Header
+========================= */
+.site-header {
+  background: #0f172a;
+  color: white;
+  padding: 30px 0;
+}
+
+.site-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.main-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  gap: 1rem 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav a {
+  color: white;
+  font-weight: 600;
+}
+
+/* =========================
+   Buttons
+========================= */
+.btn {
+  display: inline-block;
+  padding: 14px 28px;
+  background: #2563eb;
+  color: white;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background: #1d4ed8;
+}
+
+.btn-secondary {
+  background: #e5e7eb;
+  color: #111827;
+}
+
+.btn-secondary:hover {
+  background: #d1d5db;
+}
+
+/* =========================
+   Hero Section
+========================= */
+.hero {
+  padding: 100px 0;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  flex-wrap: wrap;
+}
+
+.hero-text,
+.hero-image {
+  flex: 1 1 300px;
+}
+
+.hero-text {
+  width: auto;
+}
+
+.hero-text h1 {
+  font-size: clamp(2.5rem, 6vw, 3.5rem);
+  line-height: 1.1;
+  margin-bottom: 24px;
+}
+
+.hero-text p {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  margin-bottom: 32px;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.hero-image img {
+  width: 100%;
+  border-radius: 16px;
+}
+
+/* =========================
+   Features Section
+========================= */
+.features-section {
+  padding: 100px 0;
+  background: #f8fafc;
+}
+
+.features-section h2 {
+  text-align: center;
+  font-size: clamp(2rem, 5vw, 2.625rem);
+  margin-bottom: 60px;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  background: white;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.card h3 {
+  margin-top: 0;
+  font-size: 28px;
+}
+
+/* =========================
+   Call to Action
+========================= */
+.cta {
+  padding: 120px 0;
+  text-align: center;
+}
+
+.cta h2 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin-bottom: 20px;
+}
+
+.cta p {
+  font-size: clamp(1rem, 2.5vw, 1.375rem);
+  margin-bottom: 40px;
+}
+
+/* =========================
+   Footer
+========================= */
+.site-footer {
+  background: #111827;
+  color: white;
+  padding: 40px 0;
+  text-align: center;
+}
+
+/* =========================
+   Tablet and Mobile Adjustments
+========================= */
+@media (max-width: 768px) {
+  .site-header {
+    padding: 20px 0;
+  }
+
+  .site-header .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .main-nav ul {
+    justify-content: center;
+  }
+
+  .hero {
+    padding: 60px 0;
+  }
+
+  .hero-content {
+    gap: 2.5rem;
+  }
+
+  .hero-text {
+    text-align: center;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .features-section,
+  .cta {
+    padding: 60px 0;
+  }
+
+  .features-section h2 {
+    margin-bottom: 40px;
+  }
+
+  .card {
+    padding: 30px;
+  }
+}
+
+/* =========================
+   Small Mobile Devices
+========================= */
+@media (max-width: 480px) {
+  .container {
+    width: min(100% - 1.5rem, 1200px);
+  }
+
+  .logo {
+    font-size: 28px;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .card {
+    padding: 24px;
+  }
+
+  .site-footer {
+    padding: 30px 0;
+  }
+}
